@@ -1,4 +1,4 @@
-let cartItems = JSON.parse(localStorage.getItem('cartList'));
+let cartItems = JSON.parse(localStorage.getItem('cartList')) || [];
 
 export function isCartEmpty() {
   const checkoutBtn = document.getElementById('cart-btn-checkout');
@@ -16,8 +16,6 @@ export function renderCartItems(containerID) {
   const container = document.getElementById(containerID);
 
   container.innerHTML = '';
-
-  console.log(cartItems);
 
   cartItems.forEach((item) => {
     const li = document.createElement('li');
