@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>FlowerShop</title>
+</head>
+
+<body>
+    <header id="header" class="">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/logo.svg" style="width: 100px; scale: 200%; margin-left: 50px;" alt="">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-menu_item"><a href="shop.html"><img src="./assets/icons/Shopping_bag.svg" alt="icon">
+                            Shop</a></li>
+                    <li class="nav-menu_item"><a href="contact.html"><img src="./assets/icons/Smartphone.svg"
+                                alt="icon">
+                            Contact</a></li>
+                    <li class="nav-menu_item" id="cart-button"><a href="#"><img src="./assets/icons/Shopping_cart.svg"
+                                alt="icon">
+                            Cart</a></li>
+                </ul>
+
+                <a href="tel:+40730673780" class="header-phone"><img src="./assets/icons/Phone.svg" alt="icon">
+                    +40730673780</a>
+
+                <!-- Hamburger icon -->
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776;
+                </div>
+            </nav>
+        </div>
+        <hr>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <!-- Desktop Navigation -->
+        <ul class="nav-menu-mobile" id="nav-menu-mobile">
+            <li class="nav-menu_item"><a href="shop.html"><img src="./assets/icons/Shopping_bag.svg" alt="icon">
+                    Shop</a></li>
+            <li class="nav-menu_item"><a href="contact.html"><img src="./assets/icons/Smartphone.svg" alt="icon">
+                    Contact</a></li>
+            <li class="nav-menu_item" id="cart-button-mobile"><a href="#">
+                    <img src="./assets/icons/Shopping_cart.svg" alt="icon">
+                    Cart</a>
+            </li>
+        </ul>
+
+
+        <a href="tel:+40730673780" class="header-phone-mobile"><img src="./assets/icons/Phone.svg" alt="icon">
+            +40730673780
+        </a>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="cart" id="cart">
+        <div class="cart-inner">
+            <ul id="cart-list">
+
+            </ul>
+            <div class="cart-empty-details" id="cart-empty-details">
+                <img src="./assets/icons/empty-cart.png" style="width: 70px;" alt="">
+                <p>Add some bouquets!</p>
+            </div>
+            <div class="cart-bottom">
+                <p>Total:
+                    <span class="product-price" id="cart-total-price"></span>
+                </p>
+                <hr>
+                <button class="btn-default-white" id="cart-btn-checkout" disabled>Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preloader active" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <main>
+        <section id="hero-section">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-details">
+                        <h1>Flowers Can Make you Happy</h1>
+                        <p>buy super fresh and beautyfull flowers, decor special event, make any person happy with
+                            us.</p>
+                        <a href="shop.html" class="btn-default">Explore Shop</a>
+                    </div>
+                    <div class="hero-video">
+                        <video autoplay muted loop>
+                            <source src="./assets/hero-video_1.mp4" />
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ribbon">
+                <div class="scrolling-text">
+                    ★ BIRTHDAY GIFT ★ ANNIVERSARY GIFT ★ WEDDING GIFT ★ HOUSEWARMING GIFT ★
+                    GRADUATION GIFT
+                    ★ RETIREMENT GIFT ★ VALENTINE'S GIFT ★ CHRISTMAS GIFT ★ NEW YEAR GIFT ★ THANK YOU GIFT ★ PROMOTION
+                    GIFT
+                    ★ BIRTHDAY GIFT ★ ANNIVERSARY GIFT ★ WEDDING GIFT ★ HOUSEWARMING GIFT ★
+                    GRADUATION GIFT
+                </div>
+            </div>
+        </section>
+        <section id="popular-collection">
+            <div class="container">
+                <h2 class="popular-collection__title">Popular Collection</h2>
+                <p class="popular-collection__description">Fresh Flowers Are Celebrated For Their Beauty And The
+                    Wide Range Of Colors, Shapes And Sizes</p>
+                <div class="popular-collection_wrapper" id="popular-collection_wrapper">
+                    <a href="shop.html" class="popular-collection_link-explore">Explore All ></a>
+
+                </div>
+
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2 class="testimonials-title">What Our Customers Say</h2>
+            <p class="testimonials-description">Order a bouquet and join the hundreds of happy customers who trust us.
+                We deliver quality and heartfelt emotion.</p>
+            <div class="testimonials-cards-wrapper">
+                <div class="swiper" id="slider-1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">Perfect Anniversary Surprise</p>
+                            <p class="testimonial-card__description">I ordered a bouquet for my wife in Bucharest, and
+                                she was thrilled! The flowers were fresh and beautifully arranged. Delivery was right on
+                                time.</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Andrei P.</strong></p>
+                                    <p class="testimonial-card__date">March 8, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">Excellent Customer Service</p>
+                            <p class="testimonial-card__description">I had a question about delivery to Lviv, and the
+                                support team responded quickly and kindly. The flowers arrived perfectly. Highly
+                                recommend!</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Olena K.</strong></p>
+                                    <p class="testimonial-card__date">April 12, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">Beautiful and Fragrant</p>
+                            <p class="testimonial-card__description">The bouquet looked even better than the photos. The
+                                roses were large, fresh, and smelled amazing. Great experience.</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Cristina D.</strong></p>
+                                    <p class="testimonial-card__date">May 1, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">Seamless Gift from Abroad</p>
+                            <p class="testimonial-card__description">I ordered from Germany to send flowers to my mom in
+                                Cluj-Napoca. Everything went smoothly and she loved them.</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Mihai L.</strong></p>
+                                    <p class="testimonial-card__date">February 14, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">So Elegant and Classy</p>
+                            <p class="testimonial-card__description">The "Rose Bliss" bouquet was incredibly elegant.
+                                Perfect for a romantic occasion. Delivery in Kyiv was fast and flawless.</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Daria M.</strong></p>
+                                    <p class="testimonial-card__date">January 25, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper" id="slider-2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">Perfect Anniversary Surprise</p>
+                            <p class="testimonial-card__description">I ordered a bouquet for my wife in Bucharest, and
+                                she was thrilled! The flowers were fresh and beautifully arranged. Delivery was right on
+                                time.</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Andrei P.</strong></p>
+                                    <p class="testimonial-card__date">March 8, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">Excellent Customer Service</p>
+                            <p class="testimonial-card__description">I had a question about delivery to Lviv, and the
+                                support team responded quickly and kindly. The flowers arrived perfectly. Highly
+                                recommend!</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Olena K.</strong></p>
+                                    <p class="testimonial-card__date">April 12, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">Beautiful and Fragrant</p>
+                            <p class="testimonial-card__description">The bouquet looked even better than the photos. The
+                                roses were large, fresh, and smelled amazing. Great experience.</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Cristina D.</strong></p>
+                                    <p class="testimonial-card__date">May 1, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">Seamless Gift from Abroad</p>
+                            <p class="testimonial-card__description">I ordered from Germany to send flowers to my mom in
+                                Cluj-Napoca. Everything went smoothly and she loved them.</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Mihai L.</strong></p>
+                                    <p class="testimonial-card__date">February 14, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="testimonial-card__raiting-icon" src="./assets/icons/Rating.svg" alt="">
+                            <p class="testimonial-card__title">So Elegant and Classy</p>
+                            <p class="testimonial-card__description">The "Rose Bliss" bouquet was incredibly elegant.
+                                Perfect for a romantic occasion. Delivery in Kyiv was fast and flawless.</p>
+                            <div class="testimonial-card-details">
+
+                                <div>
+                                    <p class="testimonial-card__name"><strong>Daria M.</strong></p>
+                                    <p class="testimonial-card__date">January 25, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="why-choose-us">
+            <div class="container">
+                <div class="why-choose-us__wrapper">
+                    <div class="why-choose-us__image-wrapper">
+                        <img src="./assets/192a26b7-5407-4663-b3be-8476bf340bd1.jpg" alt="flowers">
+                        <img src="./assets/6df5748e-6bcb-4534-93f2-4833cdd686c2.jpg" alt="flowers">
+                        <img src="./assets/83f6c82c-0b2f-4551-82e9-bd19bef31de7.jpg" alt="flowers">
+                        <img src="./assets/8e923ea1-652c-47d2-bf97-295b9831ee18.jpg" alt="flowers">
+                        <img src="./assets/b862df57-2bba-429c-bcd8-f7dc1a0f26f9.jpg" alt="flowers">
+                        <img src="./assets/d87aa87d-db6a-4542-8f94-10e40536b268.jpg" alt="flowers">
+                        <img src="./assets/19d531a0-9e3a-4420-8a69-9333158706c8.jpg" alt="flowers">
+                        <img src="./assets/cc61f3c7-deb2-4b49-bfad-5dc878721929.jpg" alt="flowers">
+                        <img src="./assets/fc2da7ba-66ef-47d4-bd84-2de27efd0edb.jpg" alt="flowers">
+                    </div>
+                    <div class="why-choose-us__details">
+                        <h2>Why Choose Us</h2>
+                        <p>At our flower shop, every bouquet is crafted with care, passion, and a promise of quality. We
+                            source only the freshest blooms, offer free delivery across Romania and Ukraine, and
+                            guarantee your satisfaction with every order.
+                        </p>
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="./assets/icons/check.svg" alt="icon" style="width: 24px;"> Frequently New
+                                    Design
+                                </div>
+                                <p>We refresh our flower designs often, so there's always something new waiting for you.
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="./assets/icons/check.svg" alt="icon" style="width: 24px;"> Original
+                                    Production
+                                </div>
+                                <p>All our floral arrangements are uniquely crafted in-house and made
+                                    with love.</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="./assets/icons/check.svg" alt="icon" style="width: 24px;"> Production With
+                                    Large Stock
+                                </div>
+                                <p>Always in Stock — Ready for Every Special Occasion!</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="./assets/icons/check.svg" alt="icon" style="width: 24px;"> Professional
+                                    Quality Control
+                                </div>
+                                <p>Ensuring Perfect Quality Every Time.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="cta">
+            <div class="container">
+                <div class="cta-wrapper">
+                    <h4>Beauty is Just <span class="cta-span">One Bouquet</span> Away</h4>
+                    <p>From everyday joy to life’s biggest celebrations, our flowers are ready to impress.<br>Backed by
+                        quality, crafted with love.</p>
+                    <a href="shop.html" class="btn-default">Order Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-inner__block">
+                    <p>Feel free to <span>contact us</span></p>
+                    <ul>
+                        <li>RO: +40730673780 | UA: +380669397349</li>
+                        <li>Email: info@flowershop.com</li>
+                        <li>Address: Cluj-Napoca, Fabricii De Zahar 58
+                            Odessa, Kuznechnaya 32</li>
+                    </ul>
+                </div>
+                <div class="footer-inner__block">
+                    <p><span>Pages</span></p>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/script.js"></script>
+</body>
+
+</html>

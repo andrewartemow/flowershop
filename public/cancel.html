@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>FlowerShop</title>
+</head>
+
+<body>
+    <header id="header" class="">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/logo.svg" style="width: 100px; scale: 200%; margin-left: 50px;" alt="">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-menu_item"><a href="shop.html"><img src="./assets/icons/Shopping_bag.svg" alt="icon">
+                            Shop</a></li>
+                    <li class="nav-menu_item"><a href="contact.html"><img src="./assets/icons/Smartphone.svg"
+                                alt="icon">
+                            Contact</a></li>
+                    <li class="nav-menu_item" id="cart-button"><a href="#"><img src="./assets/icons/Shopping_cart.svg"
+                                alt="icon">
+                            Cart</a></li>
+                </ul>
+
+                <a href="tel:+40730673780" class="header-phone"><img src="./assets/icons/Phone.svg" alt="icon">
+                    +40730673780</a>
+
+                <!-- Hamburger icon -->
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776;
+                </div>
+            </nav>
+        </div>
+        <hr>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <!-- Desktop Navigation -->
+        <ul class="nav-menu-mobile" id="nav-menu-mobile">
+            <li class="nav-menu_item"><a href="shop.html"><img src="./assets/icons/Shopping_bag.svg" alt="icon">
+                    Shop</a></li>
+            <li class="nav-menu_item"><a href="contact.html"><img src="./assets/icons/Smartphone.svg" alt="icon">
+                    Contact</a></li>
+            <li class="nav-menu_item" id="cart-button-mobile"><a href="#">
+                    <img src="./assets/icons/Shopping_cart.svg" alt="icon">
+                    Cart</a>
+            </li>
+        </ul>
+
+
+        <a href="tel:+40730673780" class="header-phone-mobile"><img src="./assets/icons/Phone.svg" alt="icon">
+            +40730673780
+        </a>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="cart" id="cart">
+        <div class="cart-inner">
+            <ul id="cart-list">
+
+            </ul>
+            <div class="cart-empty-details" id="cart-empty-details">
+                <img src="./assets/icons/empty-cart.png" style="width: 70px;" alt="">
+                <p>Add some bouquets!</p>
+            </div>
+            <div class="cart-bottom">
+                <p>Total:
+                    <span class="product-price" id="cart-total-price"></span>
+                </p>
+                <hr>
+                <button class="btn-default-white" id="cart-btn-checkout" disabled>Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="preloader active" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+
+    <main>
+        <section id="contact">
+            <div class="container">
+                <h4 style="text-align: center;">Transaction Cancelled</h4>
+                <p style="text-align: center; max-width: 500px; margin: 0 auto; display: block;">You have cancelled the
+                    process. No action was taken.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-inner__block">
+                    <p>Feel free to <span>contact us</span></p>
+                    <ul>
+                        <li>RO: +40730673780 | UA: +380669397349</li>
+                        <li>Email: info@flowershop.com</li>
+                        <li>Address: Cluj-Napoca, Fabricii De Zahar 58
+                            Odessa, Kuznechnaya 32</li>
+                    </ul>
+                </div>
+                <div class="footer-inner__block">
+                    <p><span>Pages</span></p>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="policies.html">Policies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
